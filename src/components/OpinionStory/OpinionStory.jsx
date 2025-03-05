@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { QUERIES } from '../../constants';
 
 const OpinionStory = ({ id, title, author, avatar }) => {
   return (
@@ -17,6 +18,13 @@ const OpinionStory = ({ id, title, author, avatar }) => {
 
 const Wrapper = styled.article`
   color: var(--color-gray-900);
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+
+  @media ${QUERIES.tabletOnly} {
+    display: revert;
+  }
 `;
 
 const Avatar = styled.img`
